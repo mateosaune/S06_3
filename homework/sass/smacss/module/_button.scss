@@ -1,0 +1,32 @@
+.btn {
+  background-color: transparent;
+  border: none;
+  
+  &-primary, &-secondary {
+      padding: 10px;
+      width: 100px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all $transition-time ease-in;
+  }
+
+  &-primary {
+      background-color: $bg-primary;
+      color: $btn-primary-color;
+
+      &:hover {
+          background-color: $bg-primary-hover;
+          color: $btn-primary-color-hover;
+      }
+  }
+
+  &-secondary {
+      background-color: $bg-secondary;
+      color: $btn-secondary-color;
+
+      &:hover {
+          background-color: $bg-secondary-hover;
+          color: $btn-secondary-color-hover;
+      }
+  }
+}

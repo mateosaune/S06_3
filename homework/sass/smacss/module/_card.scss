@@ -1,0 +1,24 @@
+.card {
+  width: 250px; /* Ancho estándar para las cartas */
+  padding: 10px;
+  border-radius: 20px;
+  background-color: $bg-card;
+  box-shadow: 10px 10px 0 rgb(27, 27, 27);
+  transition: all $transition-time ease-in;
+
+  img {
+      width: 100%; /* Ancho completo */
+      height: auto; /* Mantener la relación de aspecto */
+      border-radius: 20px; /* Bordes redondeados en la imagen */
+  }
+
+  &-buttons {
+      display: flex;
+      justify-content: center; /* Centrar el botón */
+      align-items: center;
+  }
+
+  &:hover {
+      transform: translate(0, -30px);
+  }
+}

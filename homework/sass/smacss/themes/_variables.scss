@@ -1,0 +1,34 @@
+// Variables de color
+$color-dark-slate-gray: #36453bff;
+$color-dim-gray: #596869ff;
+$color-ebony: #515751ff;
+$color-ivory: #f5f9e9ff;
+$color-sage: #c2c1a5ff;
+
+// Variables de tipografía
+$font-family-base: 'Arial, sans-serif';
+$font-size-large: 1.5rem;
+$font-size-small: 1rem;
+
+// Variables de espaciado y border-radius
+$padding: 1rem;
+$border-radius: 8px;
+$transition-time: 0.3s;
+
+// Variables de color de botones
+$text-color: black;
+
+// Botón primario
+$bg-primary: $color-dark-slate-gray;
+$bg-primary-hover: #596869ff;
+$btn-primary-color: white;
+$btn-primary-color-hover: black;
+
+// Botón secundario
+$bg-secondary: rgb(197, 197, 197);
+$bg-secondary-hover: rgb(255, 255, 255);
+$btn-secondary-color: black;
+$btn-secondary-color-hover: black;
+
+// Cartas
+$bg-card: rgb(228, 228, 228);

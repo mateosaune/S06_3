@@ -1,0 +1,19 @@
+.container {
+  padding: $padding;
+  position: relative;
+  height: inherit;
+  width: 50%;
+  margin: 40px auto;
+  flex: 1;
+  
+  .section {
+    height: inherit;
+      &-cards {
+          display: flex;
+          flex-wrap: wrap; /* Permitir que las cartas se envuelvan */
+          justify-content: space-evenly;
+          align-items: flex-start; /* Alinear al inicio */
+          gap: 20px; /* Espacio entre las cartas */
+      }
+  }
+}

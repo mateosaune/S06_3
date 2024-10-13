@@ -1,0 +1,19 @@
+.card{
+    width: 250px;
+    padding: 30px;
+    // border: 1px solid black;
+    border-radius: 20px;
+    background-color: $bg-card;
+    box-shadow: 10px 10px 0 rgb(27, 27, 27);
+    transition: all 0.2s ease-in;
+
+    &-buttons{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.card:hover{
+    transform: translate(0,-30px);
+}

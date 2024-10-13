@@ -1,0 +1,15 @@
+.footer {
+  position: relative;
+  background-color: $color-ebony;
+  color: $color-ivory;
+  text-align: center;
+  padding: $padding;
+  height: 10%;
+  width: 80%;
+  margin: 0 auto;
+  align-items: flex-end;
+  flex: 1;
+  p {
+      margin: 0;
+  }
+}
