@@ -1,13 +1,15 @@
 .btn {
-  background-color: transparent;
-  border: none;
-  
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    
   &-primary, &-secondary {
       padding: 10px;
       width: 100px;
       border-radius: 10px;
       cursor: pointer;
-      transition: all $transition-time ease-in;
+      transition: background-color $transition-time ease-in;
   }
 
   &-primary {
@@ -30,3 +32,16 @@
       }
   }
 }
+
+  
+  .btn-primary {
+    transition: background-color 0.2s ease-in;
+  }
+    
+  .btn-secondary{
+    transition: background-color 0.2s ease-in;
+  }
+ 
+  .btn-menu{
+    display: none;
+  }

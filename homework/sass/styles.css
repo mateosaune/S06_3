@@ -2,13 +2,15 @@
 .btn {
   background-color: transparent;
   border: none;
+  padding: 10px;
+  border-radius: 10px;
 }
 .btn-primary, .btn-secondary {
   padding: 10px;
   width: 100px;
   border-radius: 10px;
   cursor: pointer;
-  transition: all 0.3s ease-in;
+  transition: background-color 0.2s ease-in;
 }
 .btn-primary {
   background-color: #36453b;
@@ -27,17 +29,30 @@
   color: black;
 }
 
+.btn-primary {
+  transition: background-color 0.2s ease-in;
+}
+
+.btn-secondary {
+  transition: background-color 0.2s ease-in;
+}
+
+.btn-menu {
+  display: none;
+}
+
 .card {
-  width: 250px; /* Ancho estándar para las cartas */
+  height: 470px;
+  width: 270px; /* Ancho estándar para las cartas */
   padding: 10px;
   border-radius: 20px;
   background-color: rgb(228, 228, 228);
-  box-shadow: 10px 10px 0 rgb(27, 27, 27);
-  transition: all 0.3s ease-in;
+  box-shadow: 10px 5px 0 rgb(27, 27, 27);
+  transition: all 0.2s ease-in;
 }
 .card img {
   width: 100%; /* Ancho completo */
-  height: auto; /* Mantener la relación de aspecto */
+  height: 153px; /* Mantener la relación de aspecto */
   border-radius: 20px; /* Bordes redondeados en la imagen */
 }
 .card-buttons {
@@ -369,16 +384,54 @@ template {
   display: none;
 }
 
-header {
-  background-color: #36453b;
-  color: #f5f9e9;
-  padding: 1rem;
-  text-align: center;
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
 }
-header h1 {
-  margin: 0;
+.nav-header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+.nav-items {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav-link {
+  text-decoration: none;
+  font-size: large;
+  color: #252525;
+  padding: 15px;
+  border-radius: 10px;
+  transition: color 0.2s ease-in;
+  text-transform: uppercase;
+}
+.nav-link:hover {
+  color: rgb(186, 185, 185);
 }
 
+/* Responsive navbar */
+@media (min-width: 1870px) {
+  .nav {
+    gap: 50px;
+  }
+}
+@media (max-width: 886px) {
+  .nav-items {
+    display: none;
+  }
+  .nav-btns {
+    display: none;
+  }
+  .btn-menu {
+    display: block;
+  }
+}
 .container {
   padding: 1rem;
   position: relative;
@@ -395,9 +448,31 @@ header h1 {
   flex-wrap: wrap; /* Permitir que las cartas se envuelvan */
   justify-content: space-evenly;
   align-items: flex-start; /* Alinear al inicio */
-  gap: 20px; /* Espacio entre las cartas */
+  gap: 25px; /* Espacio entre las cartas */
 }
 
+@media (max-width: 886px) {
+  .card {
+    height: 470px;
+    width: 300px; /* Ancho estándar para las cartas */
+    border-radius: 20px;
+    background-color: rgb(228, 228, 228);
+    box-shadow: 10px 5px 0 rgb(27, 27, 27);
+    transition: all 0.2s ease-in;
+  }
+  .card img {
+    width: 100%; /* Ancho completo */
+    border-radius: 20px; /* Bordes redondeados en la imagen */
+  }
+  .card-buttons {
+    display: flex;
+    justify-content: center; /* Centrar el botón */
+    align-items: center;
+  }
+  .card:hover {
+    transform: translate(0, -30px);
+  }
+}
 .footer {
   position: relative;
   background-color: #515751;

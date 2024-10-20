@@ -1,14 +1,15 @@
 .card {
-  width: 250px; /* Ancho estándar para las cartas */
+  height: 470px;
+  width: 270px; /* Ancho estándar para las cartas */
   padding: 10px;
   border-radius: 20px;
   background-color: $bg-card;
-  box-shadow: 10px 10px 0 rgb(27, 27, 27);
+  box-shadow: 10px 5px 0 rgb(27, 27, 27);
   transition: all $transition-time ease-in;
 
   img {
       width: 100%; /* Ancho completo */
-      height: auto; /* Mantener la relación de aspecto */
+      height: 153px; /* Mantener la relación de aspecto */
       border-radius: 20px; /* Bordes redondeados en la imagen */
   }
 

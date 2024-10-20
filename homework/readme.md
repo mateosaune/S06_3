@@ -69,3 +69,127 @@ Este proyecto es un sitio web que ofrece servicios de limpieza. Utiliza Sass par
     box-shadow: 10px 10px 0 rgb(27, 27, 27);
 }
 ```
+
+
+## Responsive
+
+## Vista en Escritorio
+![WEB](./img/web.png)
+
+## Vista Mobile
+![MOBILE](./img/mobile.png)
+
+### buttons
+- Se utiliza para ocultar items y agregar icon 
+
+```scss
+  .btn-menu{
+    display: none;
+  }
+```
+### header
+```scss
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+
+    &-header {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 10px;
+    }
+    &-items {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    &-link {
+        text-decoration: none;
+        font-size: large;
+        color: #252525;
+        padding: 15px;
+        border-radius: 10px;
+        transition: color 0.2s ease-in;
+        text-transform: uppercase;
+
+        &:hover {
+            color: rgb(186, 185, 185);
+        }
+    }
+}
+
+/* Responsive navbar */
+@media (min-width: 1870px) {
+    .nav {
+        gap: 50px;
+    }
+}
+
+@media (max-width: 886px) {
+    .nav-items {
+        display: none;
+    }
+    .nav-btns {
+        display: none;
+    }
+    .btn-menu {
+        display: block;
+    }
+}
+```
+
+
+### main
+```scss
+.container {
+    padding: $padding;
+    position: relative;
+    height: inherit;
+    width: 50%;
+    margin: 40px auto;
+    flex: 1;
+
+    .section {
+        height: inherit;
+
+        &-cards {
+            display: flex;
+            flex-wrap: wrap; /* Permitir que las cartas se envuelvan */
+            justify-content: space-evenly;
+            align-items: flex-start; /* Alinear al inicio */
+            gap: 25px; /* Espacio entre las cartas */
+        }
+    }
+}
+
+/* Responsive */
+@media (max-width: 886px) {
+    .card {
+        height: 470px;
+        width: 300px; /* Ancho estándar para las cartas */
+        border-radius: 20px;
+        background-color: $bg-card;
+        box-shadow: 10px 5px 0 rgb(27, 27, 27);
+        transition: all $transition-time ease-in;
+
+        img {
+            width: 100%; /* Ancho completo */
+            border-radius: 20px; /* Bordes redondeados en la imagen */
+        }
+
+        &-buttons {
+            display: flex;
+            justify-content: center; /* Centrar el botón */
+            align-items: center;
+        }
+
+        &:hover {
+            transform: translate(0, -30px);
+        }
+    }
+}
+```
